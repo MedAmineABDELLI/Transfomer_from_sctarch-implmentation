@@ -9,9 +9,18 @@ corpus = [
     ]
 
 def caracter_count(corpus):
+    tokens = {
+
+    }
     for i in range(len(corpus)):
         word = corpus[i]
         for j in word:
-            carac_1 = j
-            for k in word:
-                if carac_1 == 
+            chars = word.split("")
+            for k in chars:
+                token = chars[k] + chars[k+1]
+                tokens{
+                    "caracter" : token,
+                    "redundancy":
+                }
+
+            
