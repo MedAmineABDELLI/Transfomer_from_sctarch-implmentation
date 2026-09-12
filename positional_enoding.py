@@ -25,12 +25,6 @@ def Postionnal_encoding_word(tokenised_test,word_postion):
 
     return PE_arrray
 
-
-
-
-
-
-
 def generate_postionnal_encoding_matrix(tokenised_texte):
     PE_matrix = []
     for i in range(0,len(tokenised_texte)):
