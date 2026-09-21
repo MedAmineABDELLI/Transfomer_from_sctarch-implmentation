@@ -1,7 +1,7 @@
 import numpy as np
 tokenised_texte = ["the" , "cat" , "is" , "so" ]
 d_model = len(tokenised_texte)
-def Postionnal_encoding_word(tokenised_test,word_postion):
+def Postionnal_encoding_word(word_postion):
     dinominator = []
     PE_arrray = []
     index = 0
