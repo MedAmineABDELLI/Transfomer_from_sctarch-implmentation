@@ -4,16 +4,6 @@ import numpy as np
 tokenised_texte = ["the", "cat", "is", "so"]
 shifted_pos_text = ["SOS", "the", "cat", "is"]
 
-np.random.default_rng(42)
-d_model = 4
-Xe = np.random.rand(5,d_model)
-Wq = np.random.rand(d_model,d_model)
-Wk = np.random.rand(d_model,d_model)
-Wv = np.random.rand(d_model,d_model)
-
-d_model = len(shifted_pos_text)  # d_model = 4
-
-
 def Postionnal_encoding_word(word_postion, d_model):
     dinominator = []
     PE_array = []
