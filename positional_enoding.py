@@ -4,6 +4,12 @@ import numpy as np
 tokenised_texte = ["the", "cat", "is", "so"]
 shifted_pos_text = ["SOS", "the", "cat", "is"]
 
+def layer_normalisation(X):
+    epsilon = 10**-4
+    mean = np.mean(X)
+    std = np.std(X)
+    return (X - mean) / (np.sqrt((std**2 + epsilon) ) )
+
 def Postionnal_encoding_word(word_postion, d_model):
     dinominator = []
     PE_array = []
@@ -49,13 +55,12 @@ def generate_postionnal_encoding_matrix(tokenised_texte, d_model):
 
 # Execute function
 PE_matrix = generate_postionnal_encoding_matrix(
-    tokenised_texte=shifted_pos_text, d_model=d_model
+    tokenised_texte=shifted_pos_text, d_model=5
 )
 
 # Print resulting Positional Encoding Matrix (4 x 4)
 for row in PE_matrix:
     print([round(x, 4) for x in row])
 
-print(Xe)
 
 
